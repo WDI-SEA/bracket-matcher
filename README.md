@@ -10,4 +10,8 @@ Let's say you're an SEI instructor at GA and you have a student who comes to you
 
 ## Requirements
 
-Write a Python function that takes a string input. This string represents code. It may have any number of characters in it, and the characters may be anything. For our purposes, we'll ignore anything that isn't one of the following: `[`, `]`, `{`, `}`, `(`, `)`.
+Write a Python function that takes a string input. This string represents code. It may have any number of characters in it, and the characters may be anything. For our purposes, we'll ignore anything that isn't one of the following: `[`, `]`, `{`, `}`, `(`, `)`. Your function definition looks like this:
+
+```python
+def bracket_matcher(input):
+```
