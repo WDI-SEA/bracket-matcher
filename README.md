@@ -15,3 +15,40 @@ Write a Python function that takes a string input. This string represents code. 
 ```python
 def bracket_matcher(input):
 ```
+
+The return value is a boolean. You should return `True` if the brackets are properly matched and nested, otherwise `False`. 
+
+**HINT**
+
+This problem becomes *remarkably* easier to solve using a recent data structure we've learned in class. Hint, hint!
+
+## Test Cases
+
+```python
+bracket_matcher('abc(123)')
+# returns true
+
+bracket_matcher('a[b]c(123')
+# returns false -- missing closing parens
+
+bracket_matcher('a[bc(123)]')
+# returns true
+
+bracket_matcher('a[bc(12]3)')
+# returns false -- improperly nested
+
+bracket_matcher('a{b}{c(1[2]3)}')
+# returns true
+
+bracket_matcher('a{b}{c(1}[2]3)')
+# returns false -- improperly nested
+
+bracket_matcher('()')
+# returns true
+
+bracket_matcher('[]]')
+# returns false - no opening bracket to correspond with last character
+
+bracket_matcher('abc123yay')
+# returns true -- no brackets = correctly matched
+```
