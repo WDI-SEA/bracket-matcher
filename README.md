@@ -28,12 +28,14 @@ This problem becomes *remarkably* easier to solve using a recent data structure 
   Alright - so, you want to keep track of (store in a data structure) opening brackets (or parentheses or braces) and then when you encounter a closing bracket, if it matches the previous opening bracket, great - keep going! But if it doesn't you can immediately return false. Whenever you encounter a closing bracket, it should match the type of the *most recently opened bracket*. In other words, if you encounter a `]`, then the last opening you should have seen would be a `[`. This is a LAST-IN-FIRST-OUT structure - so let's use a <strong>Stack</strong>!
   <br /><br />
   Push opening brackets onto the stack, then pop them off and mack sure they match when you encounter a closing bracket.
-  <br /><br />
-  At the very end, make sure that the stack is empty!
   <br />
 </details>
 
+At the very end, make sure that your data structure is empty! This will account for cases like `ab[c` where there is an opening bracket with no corresponding closing bracket.
+
 ## Test Cases
+
+Think you got it figured out? Run through these to make sure!
 
 ```python
 bracket_matcher('abc(123)')
