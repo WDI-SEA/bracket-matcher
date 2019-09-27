@@ -22,6 +22,17 @@ The return value is a boolean. You should return `True` if the brackets are prop
 
 This problem becomes *remarkably* easier to solve using a recent data structure we've learned in class. Hint, hint!
 
+<summary>
+  <details>I need a bigger hint?</details>
+  
+  <br />
+  Alright - so, you want to keep track of (store in a data structure) opening brackets (or parentheses or braces) and then when you encounter a closing bracket, if it matches the previous opening bracket, great - keep going! But if it doesn't you can immediately return false. Whenever you encounter a closing bracket, it should match the type of the *most recently opened bracket*. In other words, if you encounter a `]`, then the last opening you should have seen would be a `[`. This is a LAST-IN-FIRST-OUT structure - A Stack!
+  <br />
+  Push opening brackets onto the stack, then pop them off and mack sure they match when you encounter a closing bracket.
+  <br />
+  At the very end, make sure that the stack is empty!
+</summary>
+
 ## Test Cases
 
 ```python
