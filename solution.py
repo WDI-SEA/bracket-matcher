@@ -1,18 +1,19 @@
 def bracket_matcher(input):
   close_brackets = [']', ')', '}']
   open_brackets = ['[', '(', '{']
+  check = { '{':'}', '[':']', '(':')' }
   sample_jar = []
   for i in range(len(input)):
     if input[i] in open_brackets:
       sample_jar.append(input[i])
     elif input[i] in close_brackets:
       sample = sample_jar.pop()
-      if sample != input[i]:
+      if check.get(sample) == input[i]:
+        return True
+      else:
         return False
-    else:
-      return True
+      
 
-    
 print('1', bracket_matcher('abc(123)'))
 # returns true
 
