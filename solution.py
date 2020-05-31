@@ -7,11 +7,16 @@ def bracket_matcher(input):
     if input[i] in open_brackets:
       sample_jar.append(input[i])
     elif input[i] in close_brackets:
-      sample = sample_jar.pop()
-      if check.get(sample) == input[i]:
-        return True
-      else:
+      if len(sample_jar) == 0:
         return False
+      else:
+        sample = sample_jar.pop()
+        if check.get(sample) == input[i]:
+          result = True
+        else:
+          return False
+  result = True
+  return result
       
 
 print('1', bracket_matcher('abc(123)'))
