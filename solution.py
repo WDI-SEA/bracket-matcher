@@ -22,6 +22,22 @@ def bracket_matcher(input):
         return True
     return False            
 
+
+# bracket_matcher : other variation
+def test_brackets(input):
+    opens = {'{': '}', '(': ')', '[': ']'}
+    closes = {'}': '{', ')': '(', ']': '['}
+    stack = []
+    for c in input:
+        if c in opens: stack.append(c)
+        elif c in closes:
+            if not stack: return False
+            if not opens[stack.pop()] == c: return False
+    return not len(stack)
+
+
+
+
 status = bracket_matcher('{ac}}e{{hs}')
 print('status',status)
 
