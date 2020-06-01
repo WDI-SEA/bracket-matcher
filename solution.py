@@ -1,13 +1,17 @@
 def bracket_matcher(input):
+    # empty stack
     catch = []
+    # all the brackets
     brackets = {'[':']', '{':'}', '(':')'}
+    # loop through input
     for i in input:
+        # catch the keys and append to stack
         if i in brackets.keys(): catch.append(i)
+        # look for other side of brackets
         if i in brackets.values():
-            # if not brackets:
-            #     return False
+            # if not brackets pop outa catch and return false
             if brackets[catch.pop()] != i: return False
-
+            
     if len(catch) != 0: return False
     else: return True
 
