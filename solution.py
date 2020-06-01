@@ -13,10 +13,8 @@ def bracket_matcher(input):
         sample = sample_jar.pop()
         if check.get(sample) != input[i]:
           return False
-        else:
-          result = True
-  result = True
-  return result
+  
+  return len(sample_jar) == 0
 
 print('1', bracket_matcher('abc(123)'))
 # returns true
