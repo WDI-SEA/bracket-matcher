@@ -12,10 +12,6 @@ def bracket_matcher(input):
                 ')': '('
             }
 
-    # edge case where input is empty string
-    if len(input) == 0:
-        return True
-
     # loop over input and check if char is a valid character
     for char in input:
         # if it is opening, add to stack
