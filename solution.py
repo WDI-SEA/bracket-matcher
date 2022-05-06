@@ -34,15 +34,18 @@ def bracket_matcher(input):
             else:
                 # we are trying to match a bracket and the stack is empty
                 return False
+    
+    # if there is anything in the stack -- return false
+    if len(brackets) > 0:
+        return False
 
     return True
 
-# print(bracket_matcher('(hello)'))
-print('it should be False:', bracket_matcher('(h))'))
-print('it should be True:',  bracket_matcher('()'))
+if __name__ == '__main__':
+    # print(bracket_matcher('(hello)'))
+    print('it should be False:', bracket_matcher('(h))'))
+    print('it should be True:',  bracket_matcher('()'))
 
-
-
-print('it should be False:',  bracket_matcher('{} () (({hello})) [()] {'))
-print('it should be True:', bracket_matcher('{} () (({hello})) [()]'))
-print('it should be True:', bracket_matcher(''))
+    print('it should be False:',  bracket_matcher('{} () (({hello})) [()] {'))
+    print('it should be True:', bracket_matcher('{} () (({hello})) [()]'))
+    print('it should be True:', bracket_matcher(''))
