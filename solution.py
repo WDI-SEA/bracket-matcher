@@ -5,17 +5,16 @@ def bracket_matcher(input):
     brackets = []
     # need to know all valid characters
     opening_chars = ['{', '[', '(']
+    # closing chars with their matching openings
     closing_chars = {
-            '}': '{', 
-            ']': '[', 
-            ')': '('
+                '}': '{', 
+                ']': '[', 
+                ')': '('
             }
+
     # edge case where input is empty string
     if len(input) == 0:
         return True
-    # edge case where last thing in string is an opening bracket
-    if input[len(input) - 1] in opening_chars:
-        return False
 
     # loop over input and check if char is a valid character
     for char in input:
