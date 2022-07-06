@@ -1,5 +1,3 @@
-
-
 def bracket_matcher(input):
     # stack to keep track of brackets
     brackets = []
