@@ -1,13 +1,13 @@
 def isValid(nput):
-    if len(nput) % 2 != 0:
-        return False
     checked_string = ''
     dict = {'(' : ')', '[' : ']', '{' : '}'}
     check = []
     for i in nput:
         if i in dict.keys() or i in dict.values():
             checked_string += i
-    if len(checked_string) > 0:
+    if len(checked_string) % 2 != 0:
+        return False
+    elif len(checked_string) > 0:
         for i in checked_string:
             if i in dict:
                 check.append(i)
@@ -21,6 +21,6 @@ def isValid(nput):
     else:
         return False
 
-print(isValid("(ad)[fas]a[asda]"))
+print(isValid("(ad)[fas]a[asda]a"))
 print(isValid("()][]"))
 print(isValid(""))
