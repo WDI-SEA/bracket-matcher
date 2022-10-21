@@ -1,5 +1,3 @@
-from inspect import stack
-
 
 def bracket_matcher(input):
   open_brackets = ['[','(','{']
