@@ -1,11 +1,3 @@
-anInput = 'abc(123)'
-
-anotherInput = '[]]'
-
-lastTest = '[[]'
-
-actuallyLastTest = 'abc123yay'
-
 def bracket_matcher(input):
   testArr = []
   for i in range(len(input)):
@@ -26,29 +18,6 @@ def bracket_matcher(input):
   else:
     print(False)
     return
-    
-
-  print(testArr)
-  while len(testArr) > 0:
-    for j in range(len(testArr)):
-      if j < len(testArr) - 1 and testArr[j] == '{' and testArr[j + 1] == '}':
-        testArr.pop(j)
-        testArr.pop(j)
-      elif j < len(testArr) - 1 and testArr[j] == '[' and testArr[j + 1] == ']': 
-        testArr.pop(j)
-        testArr.pop(j)
-      elif j < len(testArr) - 1 and testArr[j] == '(' and testArr[j + 1] == ')':
-        testArr.pop(j)
-        testArr.pop(j)
-      else:
-        print(False)
-        return
-    if testArr == []:
-      print(True)
-      return
-  
-
-  print(testArr)
   
 
 bracket_matcher('abc(123)')
