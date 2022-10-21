@@ -1,2 +1,9 @@
+input = input('What is your input?\n')
+
 def bracket_matcher(input):
-  pass
+  hash = {}
+  for i in input:
+    print(i)
+
+  print(bracket_matcher(input))
+
