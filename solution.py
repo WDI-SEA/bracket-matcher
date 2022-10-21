@@ -39,10 +39,7 @@ def bracket_matcher(input):
 				my_stack.pop()
 			else:
 				return False
-	if my_stack.size > 0:
-		return False
-	else:
-		return True
+	return not my_stack.size > 0
 
 print(bracket_matcher("abc(123)"))     	    # expects true
 print(bracket_matcher("a[b]c(123"))   	    # expects false - missing closing ')'
